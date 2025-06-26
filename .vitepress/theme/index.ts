@@ -3,6 +3,7 @@ import { h } from 'vue'
 import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import PageHeader from './components/PageHeader.vue'
+import ArticleList from './components/ArticleList.vue'
 import './style.css'
 
 export default {
@@ -16,5 +17,6 @@ export default {
   enhanceApp({ app, router, siteData }) {
     // 注册全局组件
     app.component('PageHeader', PageHeader)
+    app.component('ArticleList', ArticleList)
   }
 } satisfies Theme
