@@ -38,7 +38,7 @@ jobs:
 
       # 5. 构建项目（假设构建产物生成在 dist 目录下）
       - name: Build Project
-        run: pnpm vitepress build
+        run: pnpm docs:build
 
       # 6. 上传构建产物
       - name: Upload artifact

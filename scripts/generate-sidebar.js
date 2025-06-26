@@ -1,5 +1,8 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs'
+import path from 'path'
+import { fileURLToPath } from 'url'
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 /**
  * 递归读取目录结构并生成VitePress侧边栏配置
@@ -157,13 +160,13 @@ function updateConfig() {
 }
 
 // 如果直接运行此脚本
-if (require.main === module) {
+if (import.meta.url.startsWith('file:') && process.argv[1] && import.meta.url.includes(process.argv[1].replace(/\\/g, '/'))) {
   console.log('🚀 开始生成侧边栏配置...');
   updateConfig();
 }
 
-module.exports = {
+export {
   generateSidebarFromDir,
   generateFullSidebar,
   updateConfig
-}; 
+} 

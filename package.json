@@ -1,11 +1,17 @@
 {
+  "type": "module",
   "dependencies": {
     "vitepress": "^1.6.3"
   },
   "scripts": {
-    "docs:dev": "vitepress dev",
-    "docs:build": "vitepress build",
+    "docs:dev": "pnpm run generate-data && vitepress dev",
+    "docs:build": "pnpm run generate-data && vitepress build",
     "docs:preview": "vitepress preview",
-    "generate-sidebar": "node scripts/generate-sidebar.js"
+    "generate-sidebar": "node scripts/generate-sidebar.js",
+    "generate-articles": "node scripts/generate-articles-data.js",
+    "generate-data": "pnpm run generate-articles && pnpm run generate-sidebar"
+  },
+  "devDependencies": {
+    "gray-matter": "^4.0.3"
   }
 }
