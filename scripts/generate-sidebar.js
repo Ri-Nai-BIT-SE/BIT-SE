@@ -30,22 +30,28 @@ function generateSidebarFromDir(dirPath, basePath = '') {
       if (entry.isDirectory()) {
         // 递归处理子目录
         const subItems = generateSidebarFromDir(fullPath, linkPath);
+        const indexPath = path.join(fullPath, 'index.md');
+        const hasIndex = fs.existsSync(indexPath);
         
         if (subItems.length > 0) {
-          items.push({
+          const item = {
             text: entry.name,
             collapsed: true,
             items: subItems
-          });
-        } else {
-          // 如果子目录为空，检查是否有 index.md
-          const indexPath = path.join(fullPath, 'index.md');
-          if (fs.existsSync(indexPath)) {
-            items.push({
-              text: entry.name,
-              link: `/${linkPath}/`
-            });
+          };
+          
+          // 如果目录有 index.md，添加链接
+          if (hasIndex) {
+            item.link = `/${linkPath}/`;
           }
+          
+          items.push(item);
+        } else if (hasIndex) {
+          // 如果子目录为空但有 index.md
+          items.push({
+            text: entry.name,
+            link: `/${linkPath}/`
+          });
         }
       } else if (entry.name.endsWith('.md') && entry.name !== 'index.md') {
         // 处理 markdown 文件
@@ -97,55 +103,61 @@ function updateConfig() {
     let configContent = fs.readFileSync(configPath, 'utf8');
     
     // 将侧边栏配置转换为字符串
-    const sidebarStr = JSON.stringify(sidebar, null, 6)
+    const sidebarStr = JSON.stringify(sidebar, null, 2)
       .replace(/"([^"]+)":/g, '$1:') // 移除属性名的引号
-      .replace(/"/g, "'");          // 使用单引号
+      .replace(/"/g, "'")           // 使用单引号
+      .split('\n')                  // 分割成行
+      .map((line, index) => {
+        if (index === 0) return line; // 第一行不需要额外缩进
+        return '    ' + line;         // 其他行添加4格空格缩进
+      })
+      .join('\n');
     
-      // 替换现有的 sidebar 配置
-  // 使用函数来正确匹配嵌套的方括号
-  function replaceSidebar(content) {
-    const sidebarMatch = content.match(/sidebar:\s*\[/);
-    if (!sidebarMatch) {
+    // 替换现有的 sidebar 配置
+    // 使用函数来正确匹配嵌套的方括号
+    function replaceSidebar(content) {
+      const sidebarMatch = content.match(/sidebar:\s*\[/);
+      if (!sidebarMatch) {
+        return null;
+      }
+      
+      let start = sidebarMatch.index + sidebarMatch[0].length - 1; // 指向开始的 '['
+      let depth = 0;
+      let end = start;
+      
+      // 从开始的 '[' 位置开始，找到匹配的 ']'
+      for (let i = start; i < content.length; i++) {
+        if (content[i] === '[') {
+          depth++;
+        } else if (content[i] === ']') {
+          depth--;
+          if (depth === 0) {
+            end = i;
+            break;
+          }
+        }
+      }
+      
+      if (depth === 0) {
+        // 找到了匹配的结束位置
+        const before = content.substring(0, sidebarMatch.index);
+        const after = content.substring(end + 1);
+        return before + `sidebar: ${sidebarStr}` + after;
+      }
+      
       return null;
     }
     
-    let start = sidebarMatch.index + sidebarMatch[0].length - 1; // 指向开始的 '['
-    let depth = 0;
-    let end = start;
-    
-    // 从开始的 '[' 位置开始，找到匹配的 ']'
-    for (let i = start; i < content.length; i++) {
-      if (content[i] === '[') {
-        depth++;
-      } else if (content[i] === ']') {
-        depth--;
-        if (depth === 0) {
-          end = i;
-          break;
-        }
-      }
+    const updatedContent = replaceSidebar(configContent);
+    if (updatedContent) {
+      configContent = updatedContent;
+    } else {
+      // 如果没有找到现有的 sidebar，在 themeConfig 中添加
+      configContent = configContent.replace(
+        /(themeConfig:\s*{[\s\S]*?nav:\s*\[[\s\S]*?\],?)/,
+        `$1\n\n    sidebar: ${sidebarStr},`
+      );
     }
-    
-    if (depth === 0) {
-      // 找到了匹配的结束位置
-      const before = content.substring(0, sidebarMatch.index);
-      const after = content.substring(end + 1);
-      return before + `sidebar: ${sidebarStr}` + after;
-    }
-    
-    return null;
-  }
-  
-  const updatedContent = replaceSidebar(configContent);
-  if (updatedContent) {
-    configContent = updatedContent;
-  } else {
-    // 如果没有找到现有的 sidebar，在 themeConfig 中添加
-    configContent = configContent.replace(
-      /(themeConfig:\s*{[\s\S]*?nav:\s*\[[\s\S]*?\],?)/,
-      `$1\n\n    sidebar: ${sidebarStr},`
-    );
-  }
     
     fs.writeFileSync(configPath, configContent, 'utf8');
     console.log('✅ 侧边栏配置已更新到 .vitepress/config.mts');
