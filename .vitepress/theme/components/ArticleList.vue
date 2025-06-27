@@ -105,8 +105,8 @@
             </div>
 
             <!-- 评分 -->
-            <div v-if="article.frontmatter.courseRating || article.frontmatter.teacherRating" class="ratings">
-              <div v-if="article.frontmatter.courseRating" class="rating-item">
+            <div v-if="article.frontmatter.courseRating != null || article.frontmatter.teacherRating != null" class="ratings">
+              <div v-if="article.frontmatter.courseRating != null" class="rating-item">
                 <span class="rating-label">课程评分：</span>
                 <div class="stars">
                   <span
@@ -120,7 +120,7 @@
                 </div>
                 <span class="rating-score">{{ article.frontmatter.courseRating }}/10</span>
               </div>
-              <div v-if="article.frontmatter.teacherRating" class="rating-item">
+              <div v-if="article.frontmatter.teacherRating != null" class="rating-item">
                 <span class="rating-label">教师评分：</span>
                 <div class="stars">
                   <span
@@ -456,6 +456,9 @@ const formatDate = (dateStr: string) => {
   padding: 1.5rem;
   transition: all 0.3s ease;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .article-card:hover {
@@ -506,6 +509,9 @@ const formatDate = (dateStr: string) => {
 
 .card-content {
   margin-bottom: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .description {
@@ -623,7 +629,8 @@ const formatDate = (dateStr: string) => {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-bottom: 1rem;
+  margin-top: auto;
+  margin-bottom: 0;
 }
 
 .article-tag {

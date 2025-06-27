@@ -33,8 +33,8 @@
     </div>
 
     <!-- 评分 -->
-    <div v-if="pageData.courseRating || pageData.teacherRating" class="ratings">
-      <div v-if="pageData.courseRating" class="rating-item">
+    <div v-if="pageData.courseRating != null || pageData.teacherRating != null" class="ratings">
+      <div v-if="pageData.courseRating != null" class="rating-item">
         <span class="rating-label">课程评分：</span>
         <div class="stars">
           <span
@@ -48,7 +48,7 @@
         </div>
         <span class="rating-score">{{ pageData.courseRating }}/10</span>
       </div>
-      <div v-if="pageData.teacherRating" class="rating-item">
+      <div v-if="pageData.teacherRating != null" class="rating-item">
         <span class="rating-label">教师评分：</span>
         <div class="stars">
           <span
