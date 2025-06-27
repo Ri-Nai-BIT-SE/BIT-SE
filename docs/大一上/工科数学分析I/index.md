@@ -30,18 +30,19 @@ grades:
   overallPercentile: 0 # 全校百分比排名（前8%）
 
 materialLinks:
-  - url: "https://github.com/Ri-Nai-BIT-SE/BIT-SE/releases/tag/大一上/工科数学分析I/"
-    title: "release地址"
-  - url: "https://github.com/Ri-Nai-BIT-SE/BIT-SE/releases/download/%E5%A4%A7%E4%B8%80%E4%B8%8A/2005-2022-Papers.zip"
-    title: "2005-2022年试卷"
-  - url: "https://github.com/Ri-Nai-BIT-SE/BIT-SE/releases/download/%E5%A4%A7%E4%B8%80%E4%B8%8A/Ebook.pdf"
-    title: "课程电子书"
+  - url: https://github.com/Ri-Nai-BIT-SE/BIT-SE/releases/tag/工科数学分析I/
+    title: release地址
+  - url: https://github.com/Ri-Nai-BIT-SE/BIT-SE/releases/download/工科数学分析I/2005-2022-Papers.zip
+    title: 2005-2022年试卷
+  - url: https://github.com/Ri-Nai-BIT-SE/BIT-SE/releases/download/工科数学分析I/eBook.pdf
+    title: 课程电子书
 showRankTip: true
 ---
 
 # 工科数学分析I
 
 ## 课程评价
+
 ### 重要性
 
 #### 成绩

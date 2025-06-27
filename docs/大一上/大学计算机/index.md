@@ -27,6 +27,18 @@ grades:
   majorPercentile: 6
   overallPercentile: 3
 showRankTip: true
+materialLinks:
+  - url: https://github.com/Ri-Nai-BIT-SE/BIT-SE/releases/tag/大学计算机
+    title: release地址
+  - url: https://github.com/Ri-Nai-BIT-SE/BIT-SE/releases/download/大学计算机/Review-Materials.zip
+    title: 复习资料
+  - url: https://github.com/Ri-Nai-BIT-SE/BIT-SE/releases/download/大学计算机/Slides.zip
+    title: ppt（包含课件）
+  - url: https://github.com/Ri-Nai-BIT-SE/BIT-SE/releases/download/大学计算机/2023-Lecture.pptx
+    title: 2023年大计基串讲
+materialTip:
+  复习资料参考价值较低，可能不是真正的往年题，不过可以积累知识。其次就是本课程为改版前的课程，可能与改版后的课程内容有所不同。
+
 ---
 
 
@@ -42,6 +54,8 @@ showRankTip: true
 
 后面几届应该会改版成《人工智能与计算科学A》，这门课的精华（史）部分应该会保留。
 
+说实话不如提前一学期开始上 [C语言程序设计](../../大一下/C语言程序设计/)，然后删除这门课。
+
 ## 老师评价
 
 陈宇峰老师可能上课讲的比较枯燥吧，所以好像有很多的大一同学给了差评。
@@ -49,3 +63,4 @@ showRankTip: true
 因为我其实没听过他上课，只是觉得他在课后作业布置方面很严谨，给分也还行，没干过什么 CS 的事。
 
 
+## 资源分享

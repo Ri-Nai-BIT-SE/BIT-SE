@@ -27,9 +27,17 @@ grades:
   majorPercentile: 28
   overallPercentile: 24
 showRankTip: true
+
+materialLinks:
+  - url: https://github.com/Ri-Nai-BIT-SE/BIT-SE/releases/tag/线性代数B/
+    title: release地址
+  - url: https://github.com/Ri-Nai-BIT-SE/BIT-SE/releases/download/线性代数B/Slides.zip
+    title: 课程PPT
+  - url: https://github.com/Ri-Nai-BIT-SE/BIT-SE/releases/download/线性代数B/eBook.zip
+    title: 课程电子书
+
+
 ---
-
-
 # 线性代数B
 
 ## 课程评价
@@ -54,3 +62,6 @@ showRankTip: true
 
 用的是自己编的教材和讲义，可以说大家几乎都能深入浅出的理解线性代数了。
 
+## 资源分享
+
+这里分享的是吴惠彬老师的课程PPT和电子书，往年题我手上只有一些比较老的，所以没有分享。想必老师会分享的。

@@ -102,7 +102,7 @@
         </div>
       </div>
       <!-- 成绩说明提示 -->
-      <div v-if="pageData.showRankTip" class="grade-tip">
+      <div v-if="pageData.showRankTip" class="tip-wrapper">
         <div class="tip custom-block">
           <p class="custom-block-title">📊 排名说明</p>
           <p>展示的班级排名为大二分流后教学班排名，与实际大一老师给分分布不同，仅供参考</p>
@@ -130,6 +130,12 @@
             <span class="link-external">↗</span>
           </a>
         </div>
+        <div v-if="pageData.materialTip" class="tip-wrapper">
+          <div class="tip custom-block">
+            <p class="custom-block-title">📊 资料说明</p>
+            <p>{{ pageData.materialTip }}</p>
+          </div>
+        </div>
       </div>
 
       <div v-if="pageData.noteLinks?.length" class="resource-section">
@@ -141,6 +147,12 @@
             <span class="link-text">{{ link.title || link.url }}</span>
             <span class="link-external">↗</span>
           </a>
+        </div>
+        <div v-if="pageData.noteTip" class="tip-wrapper">
+          <div class="tip custom-block">
+            <p class="custom-block-title">📊 笔记说明</p>
+            <p>{{ pageData.noteTip }}</p>
+          </div>
         </div>
       </div>
     </div>
@@ -603,11 +615,11 @@ const getStatusText = (status: string) => {
   color: var(--vp-c-text-2);
 }
 
-.grade-tip {
+.tip-wrapper {
   margin-top: 1rem;
 }
 
-.grade-tip .tip.custom-block {
+.tip-wrapper .tip.custom-block {
   padding: 1rem;
   margin: 0;
   border-radius: 8px;
@@ -615,14 +627,14 @@ const getStatusText = (status: string) => {
   background-color: var(--vp-custom-block-tip-bg);
 }
 
-.grade-tip .custom-block-title {
+.tip-wrapper .custom-block-title {
   font-weight: 600;
   margin: 0 0 0.5rem 0;
   color: var(--vp-custom-block-tip-text);
   font-size: 0.9rem;
 }
 
-.grade-tip .tip.custom-block p:last-child {
+.tip-wrapper .tip.custom-block p:last-child {
   margin: 0;
   color: var(--vp-custom-block-tip-text);
   font-size: 0.85rem;
