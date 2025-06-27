@@ -36,6 +36,7 @@ materialLinks:
     title: "2005-2022年试卷"
   - url: "https://github.com/Ri-Nai-BIT-SE/BIT-SE/releases/download/%E5%A4%A7%E4%B8%80%E4%B8%8A/Ebook.pdf"
     title: "课程电子书"
+showRankTip: true
 ---
 
 # 工科数学分析I

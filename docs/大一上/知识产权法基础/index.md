@@ -25,7 +25,7 @@ grades:
   classPercentile: 52
   majorPercentile: 45
   overallPercentile: 44
-
+showRankTip: true
 ---
 
 

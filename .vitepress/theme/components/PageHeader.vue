@@ -8,12 +8,12 @@
       <span v-if="pageData.semester" class="semester">{{ pageData.semester }}</span>
       <span v-if="pageData.credit" class="credit">{{ pageData.credit }}学分</span>
     </div>
-    
+
     <!-- 描述 -->
     <div v-if="pageData.description" class="description">
       {{ pageData.description }}
     </div>
-    
+
     <!-- 课程信息 -->
     <div class="course-info">
       <div v-if="pageData.teacher" class="info-item">
@@ -37,12 +37,7 @@
       <div v-if="pageData.courseRating != null" class="rating-item">
         <span class="rating-label">课程评分：</span>
         <div class="stars">
-          <span
-            v-for="i in 10"
-            :key="i"
-            class="star"
-            :class="{ filled: i <= pageData.courseRating }"
-          >
+          <span v-for="i in 10" :key="i" class="star" :class="{ filled: i <= pageData.courseRating }">
             ★
           </span>
         </div>
@@ -51,12 +46,7 @@
       <div v-if="pageData.teacherRating != null" class="rating-item">
         <span class="rating-label">教师评分：</span>
         <div class="stars">
-          <span
-            v-for="i in 10"
-            :key="i"
-            class="star"
-            :class="{ filled: i <= pageData.teacherRating }"
-          >
+          <span v-for="i in 10" :key="i" class="star" :class="{ filled: i <= pageData.teacherRating }">
             ★
           </span>
         </div>
@@ -78,6 +68,8 @@
         <span class="grade-label">最高分：</span>
         <span class="grade-score max-score">{{ pageData.grades.maxScore }}</span>
       </div>
+
+
     </div>
 
     <!-- 排名信息 -->
@@ -109,6 +101,13 @@
           </div>
         </div>
       </div>
+      <!-- 成绩说明提示 -->
+      <div v-if="pageData.showRankTip" class="grade-tip">
+        <div class="tip custom-block">
+          <p class="custom-block-title">📊 排名说明</p>
+          <p>展示的班级排名为大二分流后教学班排名，与实际大一老师给分分布不同，仅供参考</p>
+        </div>
+      </div>
     </div>
 
     <!-- 状态信息 -->
@@ -124,34 +123,20 @@
       <div v-if="pageData.materialLinks?.length" class="resource-section">
         <h4 class="resource-title">📚 课程资料</h4>
         <div class="resource-links">
-          <a
-            v-for="link in pageData.materialLinks"
-            :key="link.url"
-            :href="link.url"
-            :title="link.title"
-            class="resource-link material-link"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a v-for="link in pageData.materialLinks" :key="link.url" :href="link.url" :title="link.title"
+            class="resource-link material-link" target="_blank" rel="noopener noreferrer">
             <span class="link-icon">📚</span>
             <span class="link-text">{{ link.title || link.url }}</span>
             <span class="link-external">↗</span>
           </a>
         </div>
       </div>
-      
+
       <div v-if="pageData.noteLinks?.length" class="resource-section">
         <h4 class="resource-title">📝 课程笔记</h4>
         <div class="resource-links">
-          <a
-            v-for="link in pageData.noteLinks"
-            :key="link.url"
-            :href="link.url"
-            :title="link.title"
-            class="resource-link note-link"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a v-for="link in pageData.noteLinks" :key="link.url" :href="link.url" :title="link.title"
+            class="resource-link note-link" target="_blank" rel="noopener noreferrer">
             <span class="link-icon">📝</span>
             <span class="link-text">{{ link.title || link.url }}</span>
             <span class="link-external">↗</span>
@@ -162,13 +147,8 @@
 
     <!-- 标签 -->
     <div v-if="pageData.tags?.length" class="course-tags">
-      <a
-        v-for="tag in pageData.tags"
-        :key="tag"
-        :href="withBase(`/articles.html?tag=${encodeURIComponent(tag)}`)"
-        class="course-tag"
-        :title="`查看所有「${tag}」相关课程`"
-      >
+      <a v-for="tag in pageData.tags" :key="tag" :href="withBase(`/articles.html?tag=${encodeURIComponent(tag)}`)"
+        class="course-tag" :title="`查看所有「${tag}」相关课程`">
         {{ tag }}
       </a>
     </div>
@@ -194,9 +174,9 @@ const pageData = computed(() => page.value.frontmatter)
 
 const showHeader = computed(() => {
   const fm = pageData.value
-  return fm.course || fm.semester || fm.teacher || fm.author || fm.lastUpdated || 
-         (fm.tags && fm.tags.length > 0) || fm.difficulty || fm.status ||
-         fm.courseRating || fm.teacherRating || hasGradeData.value || hasResourceLinks.value
+  return fm.course || fm.semester || fm.teacher || fm.author || fm.lastUpdated ||
+    (fm.tags && fm.tags.length > 0) || fm.difficulty || fm.status ||
+    fm.courseRating || fm.teacherRating || hasGradeData.value || hasResourceLinks.value
 })
 
 const hasGradeData = computed(() => {
@@ -211,8 +191,8 @@ const hasPercentileData = computed(() => {
 
 const hasResourceLinks = computed(() => {
   const fm = pageData.value
-  return (fm.materialLinks && fm.materialLinks.length > 0) || 
-         (fm.noteLinks && fm.noteLinks.length > 0)
+  return (fm.materialLinks && fm.materialLinks.length > 0) ||
+    (fm.noteLinks && fm.noteLinks.length > 0)
 })
 
 const formatDate = (dateStr: string) => {
@@ -240,20 +220,6 @@ const getStatusText = (status: string) => {
   return statusMap[status.toLowerCase()] || status
 }
 
-// 计算星星是否应该被填充（满分10分对应5颗星）
-const getStarFilled = (rating: number, starIndex: number) => {
-  const starValue = (rating / 10) * 5 // 将10分制转换为5星制
-  return starIndex <= Math.ceil(starValue)
-}
-
-// 根据个人成绩与平均分比较返回样式类
-const getGradeClass = (myScore: number, avgScore: number) => {
-  if (!avgScore) return ''
-  if (myScore >= avgScore * 1.1) return 'grade-excellent'
-  if (myScore >= avgScore) return 'grade-good'
-  if (myScore >= avgScore * 0.8) return 'grade-average'
-  return 'grade-below'
-}
 </script>
 
 <style scoped>
@@ -637,30 +603,56 @@ const getGradeClass = (myScore: number, avgScore: number) => {
   color: var(--vp-c-text-2);
 }
 
+.grade-tip {
+  margin-top: 1rem;
+}
+
+.grade-tip .tip.custom-block {
+  padding: 1rem;
+  margin: 0;
+  border-radius: 8px;
+  border: 1px solid var(--vp-custom-block-tip-border);
+  background-color: var(--vp-custom-block-tip-bg);
+}
+
+.grade-tip .custom-block-title {
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  color: var(--vp-custom-block-tip-text);
+  font-size: 0.9rem;
+}
+
+.grade-tip .tip.custom-block p:last-child {
+  margin: 0;
+  color: var(--vp-custom-block-tip-text);
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
 @media (max-width: 768px) {
   .page-header {
     padding: 1rem;
   }
-  
+
   .course-title {
     font-size: 1.5rem;
   }
-  
+
   .course-meta {
     /* 保持水平布局，让标签保持胶囊形状 */
     flex-wrap: wrap;
     gap: 0.5rem;
   }
-  
+
   .course-tags {
     gap: 0.25rem;
   }
-  
+
   .course-tag {
     font-size: 0.8rem;
     padding: 0.2rem 0.5rem;
   }
-  
+
   /* 保持信息项的水平布局，不换行 */
   .info-item,
   .rating-item,
@@ -671,7 +663,7 @@ const getGradeClass = (myScore: number, avgScore: number) => {
     align-items: center;
     gap: 0.5rem;
   }
-  
+
   .info-label,
   .rating-label,
   .grade-label,
@@ -679,30 +671,30 @@ const getGradeClass = (myScore: number, avgScore: number) => {
     min-width: 70px;
     font-size: 0.85rem;
   }
-  
+
   /* 优化百分比显示，不要拉满 */
   .percentile-display {
     max-width: 200px;
   }
-  
+
   .percentile-text {
     min-width: 50px;
     font-size: 0.8rem;
   }
-  
+
   .percentile-bar {
     max-width: 120px;
   }
-  
+
   /* 移动端按钮优化 */
   .resource-links {
     gap: 0.5rem;
   }
-  
+
   .resource-link {
     min-width: 120px;
     padding: 0.6rem 0.8rem;
     font-size: 0.8rem;
   }
 }
-</style> 
+</style>
