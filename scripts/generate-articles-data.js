@@ -59,8 +59,7 @@ function generateArticlesData() {
       return page.url !== '/' && 
              page.url !== '/about/' && 
              page.url !== '/articles/' &&
-             page.frontmatter.course && 
-             page.frontmatter.status === 'published'
+             page.frontmatter.course
     })
     .sort((a, b) => {
       // 按学期和课程名排序
