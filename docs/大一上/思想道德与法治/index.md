@@ -26,6 +26,11 @@ grades:
   majorPercentile: 27
   overallPercentile: 38
 showRankTip: true
+materialLinks:
+  - url: https://github.com/Ri-Nai-BIT-SE/BIT-SE/releases/tag/思想道德与法治
+    title: release地址
+  - url: https://github.com/Ri-Nai-BIT-SE/BIT-SE/releases/download/思想道德与法治/Review-Material.zip
+    title: 复习资料
 ---
 
 
