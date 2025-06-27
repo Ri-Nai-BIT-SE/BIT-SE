@@ -1,13 +1,13 @@
 ---
-course: C语言程序设计
-credit: 3
+course: 工科数学分析II
+credit: 6
 semester: 大一下
 author: Reina
 teacher: 
 courseRating: 
 teacherRating: 
 
-difficulty: hard
+difficulty: medium
 status: draft
 
 date: 2025-06-27
@@ -18,15 +18,15 @@ tags:
   - 公共基础课程
   
 grades:
-  maxScore: 100
-  avgScore: 74.99
-  myScore: 100
+  maxScore: 99
+  avgScore: 81.71
+  myScore: 93
   classPercentile: 8
-  majorPercentile: 1
-  overallPercentile: 0
+  majorPercentile: 11
+  overallPercentile: 11
 
 ---
 
 
-# C语言程序设计
+# 工科数学分析II
 

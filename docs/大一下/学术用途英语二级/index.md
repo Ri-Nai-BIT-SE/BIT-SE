@@ -1,5 +1,5 @@
 ---
-course: C语言程序设计
+course: 学术用途英语二级
 credit: 3
 semester: 大一下
 author: Reina
@@ -7,7 +7,7 @@ teacher:
 courseRating: 
 teacherRating: 
 
-difficulty: hard
+difficulty: medium
 status: draft
 
 date: 2025-06-27
@@ -18,15 +18,15 @@ tags:
   - 公共基础课程
   
 grades:
-  maxScore: 100
-  avgScore: 74.99
-  myScore: 100
-  classPercentile: 8
-  majorPercentile: 1
-  overallPercentile: 0
+  maxScore: 98
+  avgScore: 81.42
+  myScore: 84
+  classPercentile: 60
+  majorPercentile: 48
+  overallPercentile: 39
 
 ---
 
 
-# C语言程序设计
+# 学术用途英语二级
 

@@ -1,5 +1,5 @@
 ---
-course: C语言程序设计
+course: 中国近现代史纲要
 credit: 3
 semester: 大一下
 author: Reina
@@ -7,7 +7,7 @@ teacher:
 courseRating: 
 teacherRating: 
 
-difficulty: hard
+difficulty: easy
 status: draft
 
 date: 2025-06-27
@@ -18,15 +18,15 @@ tags:
   - 公共基础课程
   
 grades:
-  maxScore: 100
-  avgScore: 74.99
-  myScore: 100
-  classPercentile: 8
-  majorPercentile: 1
-  overallPercentile: 0
+  maxScore: 98
+  avgScore: 85.31
+  myScore: 90
+  classPercentile: 11
+  majorPercentile: 26
+  overallPercentile: 24
 
 ---
 
 
-# C语言程序设计
+# 中国近现代史纲要
 

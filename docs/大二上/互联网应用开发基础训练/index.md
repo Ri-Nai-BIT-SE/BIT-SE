@@ -1,32 +1,32 @@
 ---
-course: C语言程序设计
-credit: 3
-semester: 大一下
+course: 互联网应用开发基础训练
+credit: 1
+semester: 大二上
 author: Reina
 teacher: 
 courseRating: 
 teacherRating: 
 
-difficulty: hard
+difficulty: easy
 status: draft
 
 date: 2025-06-27
 lastUpdated: 2025-06-27
 
 tags: 
-  - 大一下
-  - 公共基础课程
+  - 大二上
+  - 实践课程
   
 grades:
   maxScore: 100
-  avgScore: 74.99
+  avgScore: 90.53
   myScore: 100
   classPercentile: 8
   majorPercentile: 1
-  overallPercentile: 0
+  overallPercentile: 2
 
 ---
 
 
-# C语言程序设计
+# 互联网应用开发基础训练
 

@@ -1,6 +1,6 @@
 ---
-course: C语言程序设计
-credit: 3
+course: 电路分析基础
+credit: 4
 semester: 大一下
 author: Reina
 teacher: 
@@ -18,15 +18,15 @@ tags:
   - 公共基础课程
   
 grades:
-  maxScore: 100
-  avgScore: 74.99
-  myScore: 100
-  classPercentile: 8
-  majorPercentile: 1
-  overallPercentile: 0
+  maxScore: 96
+  avgScore: 69.62
+  myScore: 90
+  classPercentile: 4
+  majorPercentile: 2
+  overallPercentile: 3
 
 ---
 
 
-# C语言程序设计
+# 电路分析基础
 

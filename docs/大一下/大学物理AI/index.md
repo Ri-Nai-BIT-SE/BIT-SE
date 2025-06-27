@@ -1,13 +1,13 @@
 ---
-course: C语言程序设计
-credit: 3
+course: 大学物理AI
+credit: 4
 semester: 大一下
 author: Reina
 teacher: 
 courseRating: 
 teacherRating: 
 
-difficulty: hard
+difficulty: medium
 status: draft
 
 date: 2025-06-27
@@ -19,14 +19,14 @@ tags:
   
 grades:
   maxScore: 100
-  avgScore: 74.99
-  myScore: 100
+  avgScore: 75.32
+  myScore: 94
   classPercentile: 8
-  majorPercentile: 1
-  overallPercentile: 0
+  majorPercentile: 4
+  overallPercentile: 5
 
 ---
 
 
-# C语言程序设计
+# 大学物理AI
 

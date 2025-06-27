@@ -1,6 +1,6 @@
 ---
 course: 大学计算机
-credit: 3
+credit: 2
 semester: 大一上
 author: Reina
 teacher: 陈宇峰
