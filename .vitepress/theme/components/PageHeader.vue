@@ -2,7 +2,7 @@
   <div v-if="showHeader" class="page-header">
     <!-- 课程标题 -->
     <h1 v-if="pageData.course" class="course-title">{{ pageData.course }}</h1>
-    
+    <h1 v-if="pageData.title" class="course-title">{{ pageData.title }}</h1>
     <!-- 基本信息标签 -->
     <div class="course-meta">
       <span v-if="pageData.semester" class="semester">{{ pageData.semester }}</span>

@@ -1,5 +1,5 @@
 ---
-course: 大一上
+title: 大一上
 credit: 25.25
 author: Reina
 grades:
