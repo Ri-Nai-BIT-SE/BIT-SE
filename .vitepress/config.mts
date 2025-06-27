@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { sidebarData } from './data/sidebar.js'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -19,46 +20,7 @@ export default defineConfig({
       { text: '文章', link: '/articles' }
     ],
 
-    sidebar: [
-      {
-        text: '大一上',
-        collapsed: true,
-        items: [
-          {
-            text: '大学计算机',
-            link: '/大一上/大学计算机/'
-          },
-          {
-            text: '工科数学分析I',
-            link: '/大一上/工科数学分析I/'
-          },
-          {
-            text: '线性代数B',
-            link: '/大一上/线性代数B/'
-          }
-        ],
-        link: '/大一上/'
-      },
-      {
-        text: '大一下',
-        collapsed: true,
-        items: [
-          {
-            text: 'C语言程序设计',
-            link: '/大一下/C语言程序设计/'
-          }
-        ],
-        link: '/大一下/'
-      },
-      {
-        text: '大二上',
-        link: '/大二上/'
-      },
-      {
-        text: '大二下',
-        link: '/大二下/'
-      }
-    ],
+    sidebar: sidebarData,
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/your-username/BIT-SE' }

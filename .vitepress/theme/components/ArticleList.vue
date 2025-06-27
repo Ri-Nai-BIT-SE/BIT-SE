@@ -185,7 +185,7 @@
 
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue'
-import { articlesData } from '../data/articles.js'
+import { articlesData } from '../../data/articles.js'
 import { withBase } from 'vitepress'
 
 // 类型定义

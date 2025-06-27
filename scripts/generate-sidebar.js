@@ -93,92 +93,53 @@ function generateFullSidebar() {
 }
 
 /**
- * 更新 VitePress 配置文件
+ * 生成侧边栏数据文件
  */
-function updateConfig() {
-  const configPath = path.join(__dirname, '../.vitepress/config.mts');
+function generateSidebarDataFile() {
   const sidebar = generateFullSidebar();
   
-  try {
-    let configContent = fs.readFileSync(configPath, 'utf8');
-    
-    // 将侧边栏配置转换为字符串
-    const sidebarStr = JSON.stringify(sidebar, null, 2)
-      .replace(/"([^"]+)":/g, '$1:') // 移除属性名的引号
-      .replace(/"/g, "'")           // 使用单引号
-      .split('\n')                  // 分割成行
-      .map((line, index) => {
-        if (index === 0) return line; // 第一行不需要额外缩进
-        return '    ' + line;         // 其他行添加4格空格缩进
-      })
-      .join('\n');
-    
-    // 替换现有的 sidebar 配置
-    // 使用函数来正确匹配嵌套的方括号
-    function replaceSidebar(content) {
-      const sidebarMatch = content.match(/sidebar:\s*\[/);
-      if (!sidebarMatch) {
-        return null;
-      }
-      
-      let start = sidebarMatch.index + sidebarMatch[0].length - 1; // 指向开始的 '['
-      let depth = 0;
-      let end = start;
-      
-      // 从开始的 '[' 位置开始，找到匹配的 ']'
-      for (let i = start; i < content.length; i++) {
-        if (content[i] === '[') {
-          depth++;
-        } else if (content[i] === ']') {
-          depth--;
-          if (depth === 0) {
-            end = i;
-            break;
-          }
-        }
-      }
-      
-      if (depth === 0) {
-        // 找到了匹配的结束位置
-        const before = content.substring(0, sidebarMatch.index);
-        const after = content.substring(end + 1);
-        return before + `sidebar: ${sidebarStr}` + after;
-      }
-      
-      return null;
-    }
-    
-    const updatedContent = replaceSidebar(configContent);
-    if (updatedContent) {
-      configContent = updatedContent;
-    } else {
-      // 如果没有找到现有的 sidebar，在 themeConfig 中添加
-      configContent = configContent.replace(
-        /(themeConfig:\s*{[\s\S]*?nav:\s*\[[\s\S]*?\],?)/,
-        `$1\n\n    sidebar: ${sidebarStr},`
-      );
-    }
-    
-    fs.writeFileSync(configPath, configContent, 'utf8');
-    console.log('✅ 侧边栏配置已更新到 .vitepress/config.mts');
-    
-    // 输出生成的配置供查看
-    console.log('\n📋 生成的侧边栏配置:');
-    console.log(JSON.stringify(sidebar, null, 2));
-    
-  } catch (error) {
-    console.error('❌ 更新配置文件时出错:', error.message);
+  const dataContent = `// 此文件由 scripts/generate-sidebar.js 自动生成
+// 请不要手动修改此文件
+
+export const sidebarData = ${JSON.stringify(sidebar, null, 2)}
+`;
+  
+  const outputPath = path.join(__dirname, '../.vitepress/data/sidebar.js');
+  
+  // 确保目录存在
+  const outputDir = path.dirname(outputPath);
+  if (!fs.existsSync(outputDir)) {
+    fs.mkdirSync(outputDir, { recursive: true });
   }
+  
+  fs.writeFileSync(outputPath, dataContent, 'utf-8');
+  
+  console.log(`✅ 已生成侧边栏数据文件: ${outputPath}`);
+  console.log(`📊 共生成 ${sidebar.length} 个主要学期分组`);
+  
+  if (sidebar.length > 0) {
+    console.log('📚 侧边栏结构:');
+    sidebar.forEach(item => {
+      console.log(`  - ${item.text} (${item.items ? item.items.length : 0} 个子项)`);
+    });
+  }
+  
+  return sidebar;
 }
 
 // 如果直接运行此脚本
 if (import.meta.url.startsWith('file:') && process.argv[1] && import.meta.url.includes(process.argv[1].replace(/\\/g, '/'))) {
-  console.log('🚀 开始生成侧边栏配置...');
-  updateConfig();
+  console.log('🚀 开始生成侧边栏数据...');
+  try {
+    generateSidebarDataFile();
+  } catch (error) {
+    console.error('❌ 生成侧边栏数据失败:', error.message);
+    process.exit(1);
+  }
 }
 
 export {
   generateSidebarFromDir,
   generateFullSidebar,
-  updateConfig
+  generateSidebarDataFile
 } 

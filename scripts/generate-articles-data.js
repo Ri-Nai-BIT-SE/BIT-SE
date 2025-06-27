@@ -91,7 +91,7 @@ function generateDataFile() {
 export const articlesData = ${JSON.stringify(articles, null, 2)}
 `
   
-  const outputPath = path.join(__dirname, '../.vitepress/theme/data/articles.js')
+  const outputPath = path.join(__dirname, '../.vitepress/data/articles.js')
   
   // 确保目录存在
   const outputDir = path.dirname(outputPath)
