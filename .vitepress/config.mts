@@ -16,14 +16,13 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '首页', link: '/' },
-      { text: '关于', link: '/about' },
       { text: '文章', link: '/articles' }
     ],
 
     sidebar: sidebarData,
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/your-username/BIT-SE' }
+      { icon: 'github', link: 'https://github.com/Ri-Nai-BIT-SE/BIT-SE' }
     ],
 
     search: {

@@ -8,8 +8,8 @@ hero:
   tagline: 
   actions:
     - theme: brand
-      text: 关于
-      link: /about
+      text: 文章列表
+      link: /articles
 ---
 # 📚 BIT-SE
 
