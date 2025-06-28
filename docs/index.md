@@ -11,8 +11,8 @@ hero:
       text: 文章列表
       link: /articles
     - theme: alt
-      text: GitHub 仓库
-      link: https://github.com/Ri-Nai/BIT-SE
+      text: 关于
+      link: /about
 ---
 
 # 📚 BIT-SE
