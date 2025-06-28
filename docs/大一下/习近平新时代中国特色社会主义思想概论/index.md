@@ -25,4 +25,9 @@ grades:
   majorPercentile: 42
   overallPercentile: 37
 showRankTip: true
+materialLinks:
+  - url: https://github.com/Ri-Nai-BIT-SE/BIT-SE/releases/tag/习概/
+    title: release地址
+  - url: https://github.com/Ri-Nai-BIT-SE/BIT-SE/releases/download/习概/Review-Materials.zip
+    title: 复习材料
 ---

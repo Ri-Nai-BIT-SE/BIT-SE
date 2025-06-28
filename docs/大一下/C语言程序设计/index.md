@@ -26,6 +26,9 @@ grades:
   majorPercentile: 1
   overallPercentile: 0
 showRankTip: true
+matarialLinks:
+  - url: https://github.com/Ri-Nai-BIT-SE/Lexue-Code
+    title: 课程代码
 ---
 
 # C语言程序设计

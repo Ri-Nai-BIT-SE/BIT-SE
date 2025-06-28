@@ -23,6 +23,11 @@ grades:
   classPercentile: 11
   majorPercentile: 13
   overallPercentile: 13
+materialLinks:
+  - url: https://github.com/Ri-Nai-BIT-SE/BIT-SE/releases/tag/物理实验BI/
+    title: release地址
+  - url: https://github.com/Ri-Nai-BIT-SE/BIT-SE/releases/download/物理实验BI/Report.zip
+    title: 实验报告
 showRankTip: true
 ---
 
@@ -65,7 +70,7 @@ showRankTip: true
 | 彭祖林 | 双臂电桥         | 96   |
 | 彭祖林 | 示波器           | 98   |
 | 汪洋   | 力学基本量测量   | 89   |
-| 王红梅 | 刚体转动惯量测量     | 87   |
+| 王红梅 | 刚体转动惯量测量 | 87   |
 | 金美玲 | 太阳能电池       | 98   |
 | 熊嫣   | 薄透镜焦距测量   | 99   |
 | 陶立   | 光的干涉与衍射   | 90   |

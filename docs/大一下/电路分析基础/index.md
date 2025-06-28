@@ -26,7 +26,15 @@ grades:
   majorPercentile: 2
   overallPercentile: 3
 showRankTip: true
-
+materialLinks:
+  - url: https://github.com/Ri-Nai-BIT-SE/BIT-SE/releases/tag/电路分析基础/
+    title: release地址
+  - url: https://github.com/Ri-Nai-BIT-SE/BIT-SE/releases/download/电路分析基础/Slides.zip
+    title: 课程PPT
+  - url: https://github.com/Ri-Nai-BIT-SE/BIT-SE/releases/download/电路分析基础/Papers.zip
+    title: 往年试卷
+materialTip:
+  我觉得杜娟老师的 PPT 特别好，很清晰，于是传上来了。往年题大家应该能找到更完整的。
 ---
 
 
