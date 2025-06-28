@@ -3,18 +3,18 @@ course: 中国近现代史纲要
 credit: 3
 semester: 大一下
 author: Reina
-teacher: 
-courseRating: 
-teacherRating: 
+teacher: 陈浩
+teacherRating: 8
 
 difficulty: easy
-status: draft
+status: published
 
-date: 2025-06-27
-lastUpdated: 2025-06-27
+date: 2025-06-28
+lastUpdated: 2025-06-28
 
 tags: 
   - 大一下
+  - 马克思主义学院
   - 公共基础课程
   
 grades:
@@ -24,9 +24,13 @@ grades:
   classPercentile: 11
   majorPercentile: 26
   overallPercentile: 24
-
+showRankTip: true
 ---
 
 
-# 中国近现代史纲要
+
+
+
+
+
 

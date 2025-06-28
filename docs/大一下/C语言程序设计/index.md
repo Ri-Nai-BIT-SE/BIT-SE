@@ -3,18 +3,19 @@ course: C语言程序设计
 credit: 3
 semester: 大一下
 author: Reina
-teacher: 
-courseRating: 
-teacherRating: 
+teacher: 赵三元
+courseRating: 6
+teacherRating: 6
 
 difficulty: hard
-status: draft
+status: published
 
-date: 2025-06-27
-lastUpdated: 2025-06-27
+date: 2025-06-28
+lastUpdated: 2025-06-28
 
 tags: 
   - 大一下
+  - 计算机学院
   - 公共基础课程
   
 grades:
@@ -24,9 +25,21 @@ grades:
   classPercentile: 8
   majorPercentile: 1
   overallPercentile: 0
-
+showRankTip: true
 ---
-
 
 # C语言程序设计
 
+## 课程评价
+
+烂，老掉牙、公式知识点，没有实际意义。
+
+## 老师评价
+
+感觉她其实也不会C语言。
+
+有助教制度，平时免作业、帮出题。
+
+有讲题加分制度，加剧内卷。
+
+给分挺高的，不过老师确实抽象。

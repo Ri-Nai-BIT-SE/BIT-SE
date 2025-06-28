@@ -3,18 +3,18 @@ course: 习近平新时代中国特色社会主义思想概论
 credit: 3
 semester: 大一下
 author: Reina
-teacher: 
-courseRating: 
-teacherRating: 
+teacher: 冯昊
+teacherRating: 6
 
 difficulty: easy
-status: draft
+status: published
 
-date: 2025-06-27
-lastUpdated: 2025-06-27
+date: 2025-06-28
+lastUpdated: 2025-06-28
 
 tags: 
   - 大一下
+  - 马克思主义学院
   - 公共基础课程
   
 grades:
@@ -24,9 +24,5 @@ grades:
   classPercentile: 43
   majorPercentile: 42
   overallPercentile: 37
-
+showRankTip: true
 ---
-
-
-# 习近平新时代中国特色社会主义思想概论
-
