@@ -4,6 +4,7 @@ import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import PageHeader from './components/PageHeader.vue'
 import ArticleList from './components/ArticleList.vue'
+import WalineComment from './components/WalineComment.vue'
 import './style.css'
 
 export default {
@@ -11,12 +12,14 @@ export default {
   Layout: () => {
     return h(DefaultTheme.Layout, null, {
       // https://vitepress.dev/guide/extending-default-theme#layout-slots
-      'doc-before': () => h(PageHeader)
+      'doc-before': () => h(PageHeader),
+      'doc-after': () => h(WalineComment)
     })
   },
   enhanceApp({ app, router, siteData }) {
     // 注册全局组件
     app.component('PageHeader', PageHeader)
     app.component('ArticleList', ArticleList)
+    app.component('WalineComment', WalineComment)
   }
 } satisfies Theme
