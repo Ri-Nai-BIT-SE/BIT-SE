@@ -1,7 +1,6 @@
 {
   "type": "module",
   "dependencies": {
-    "@waline/client": "^3.5.7",
     "vitepress": "^1.6.3"
   },
   "scripts": {
