@@ -8,10 +8,10 @@ courseRating: 9
 teacherRating: 10
 
 difficulty: hard
-status: draft
+status: published
 
-date: 2025-06-28
-lastUpdated: 2025-06-28
+date: 2025-06-30
+lastUpdated: 2025-06-30
 
 tags: 
   - 大二上
@@ -25,6 +25,12 @@ grades:
   classPercentile: 4
   majorPercentile: 2
   overallPercentile: 3
+materialLinks:
+  - url: https://github.com/Ri-Nai-BIT-SE/Lexue-Code
+    title: 乐学代码
+noteLinks:
+  - url: https://github.com/Ri-Nai-BIT-SE/Discrete-Math-Notes/
+    title: 课程笔记
 
 ---
 
@@ -33,9 +39,23 @@ grades:
 
 ## 课程评价
 
-计院统一学的一门课，各层面都很难学，考试的时候计算量也很大。
+计院统一学的一门课，各层面都很难学，这一届考试的时候计算量也很大。
 
 重要性应该很高，同时也能很好的锻炼思维。
+
+### 课程内容
+
+老师会布置几次作业，ddl放到比较靠后，除此之外就只有一个期末后的研学报告，显然是为了捞分用的。
+
+### 考核方式
+
+期末考试的计算量很大，而且题目比较难，我考完之后感觉自己没考好。
+
+### 复习方式
+
+平时不怎么学，作业ddl前把作业**认真**的做完。
+
+考前突击一下应该就行。
 
 ## 老师评价
 
