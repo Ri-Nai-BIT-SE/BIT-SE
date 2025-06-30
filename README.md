@@ -1,6 +1,6 @@
 # 📚 BIT-SE
 
-> 北京理工大学软件工程课程资料仓库
+> 北京理工大学软件工程课程个人学习经验分享
 
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen)](https://ri-nai-bit-se.github.io/BIT-SE/)
 [![License](https://img.shields.io/github/license/Ri-Nai/BIT-SE)](./LICENSE)
@@ -8,7 +8,7 @@
 
 ## 🌟 项目简介
 
-本项目是北京理工大学软件工程专业的课程资料仓库，致力于打破信息差，为 BIT-SE 的同学们提供学习资源和参考资料。
+本项目是我个人的北京理工大学软件工程专业学习经验分享，致力于打破信息差，通过记录和整理自己的学习心得、课程笔记和考试经验，为 BIT-SE 的同学们提供一些参考。
 
 ### 🏫 **Beijing Institute of Technology (BIT)**
 北京理工大学
@@ -58,11 +58,11 @@ pnpm install
 ### 本地开发
 
 ```bash
+# 生成数据
+pnpm run generate-data
+
 # 启动开发服务器
 pnpm run docs:dev
-
-# 生成数据并启动开发服务器
-pnpm run generate-data
 ```
 
 ### 构建部署
@@ -81,33 +81,22 @@ pnpm run docs:preview
 
 由于 Git 仓库不适合存放大量二进制文件（如课件、试卷、教材等），这些资料已上传至 [GitHub Releases](https://github.com/Ri-Nai/BIT-SE/releases)，请前往下载。
 
-### 🔗 相关仓库
 
-项目中涉及的课程代码和项目已分别存储在独立仓库中：
+## 🤔 关于贡献
 
-- **编程题代码**: [BIT-Lexue-Code](https://github.com/Ri-Nai/BIT-Lexue-Code)
-- **Portal 2D 项目**: [Portal-2D](https://github.com/Ri-Nai/Portal-2D)
-- **面向对象程序设计**: [BIT-OOP-Java](https://github.com/Ri-Nai/BIT-OOP-Java)
-- **数据库课程**: [BIT-Database-zxl](https://github.com/Ri-Nai/BIT-Database-zxl)
+### 🚧 贡献状态
 
-## 🤝 贡献指南
+由于我对于多人协作的项目结构和规范还没有完全理清，暂时**没有开放贡献接口**。
 
-欢迎同学们为项目贡献资料和改进建议！
+### 🎯 作为模板使用
 
-### 如何贡献
+如果你也想搭建类似的个人学习经验分享网站，欢迎**参考本项目的结构和实现方式**：
 
-1. Fork 本仓库
-2. 创建你的特性分支 (`git checkout -b feature/AmazingFeature`)
-3. 提交你的改动 (`git commit -m 'Add some AmazingFeature'`)
-4. 推送到分支 (`git push origin feature/AmazingFeature`)
-5. 开启一个 Pull Request
+- Fork 本仓库作为模板
+- 根据自己的需求修改配置和内容
+- 搭建属于你自己的学习经验分享站点
 
-### 贡献内容
-
-- 课程笔记和总结
-- 实验报告和作业
-- 学习心得和经验分享
-- 项目优化和 Bug 修复
+这样既能让每个人自由地分享自己的学习经验，又能保持各自项目的独立性和特色。
 
 ## ⚠️ 免责声明
 
@@ -123,7 +112,7 @@ pnpm run docs:preview
 
 ## 🙏 致谢
 
-感谢所有为本项目贡献资料和代码的同学们！
+感谢所有曾经帮助过我学习的老师和同学们，也感谢那些为开源社区贡献力量的开发者们！
 
 ---
 
