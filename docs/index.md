@@ -9,9 +9,15 @@ hero:
     - theme: brand
       text: 文章列表
       link: /articles
-    - theme: alt
+    - theme: brand
       text: 关于
       link: /about
+    - theme: alt
+      text: GitHub 仓库
+      link: https://github.com/Ri-Nai-BIT-SE/BIT-SE
+    - theme: alt
+      text: 资源列表
+      link: https://github.com/Ri-Nai-BIT-SE/BIT-SE/releases
 ---
 
 # 📚 BIT-SE
