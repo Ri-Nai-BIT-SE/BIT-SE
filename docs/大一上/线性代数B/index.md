@@ -7,7 +7,6 @@ teacher: 吴惠彬
 courseRating: 9
 teacherRating: 10
 
-
 difficulty: medium
 status: published
 
@@ -30,19 +29,19 @@ showRankTip: true
 
 materialLinks:
   - url: https://github.com/Ri-Nai-BIT-SE/BIT-SE/releases/tag/线性代数B/
-    title: release地址
+    title: release 地址
   - url: https://github.com/Ri-Nai-BIT-SE/BIT-SE/releases/download/线性代数B/Slides.zip
-    title: 课程PPT
+    title: 课程 PPT
   - url: https://github.com/Ri-Nai-BIT-SE/BIT-SE/releases/download/线性代数B/eBook.zip
     title: 课程电子书
 
-
 ---
-# 线性代数B
+
+# 线性代数 B
 
 ## 课程评价
 
-大一上除了**工科数学分析**之外的唯一一门硬课。
+大一上除了**工科数学分析**之外的**唯一一门硬课**。
 
 ### 课程内容
 
@@ -52,7 +51,7 @@ materialLinks:
 
 ### 考核难度
 
-这门课的考核难度相对较低，公式化试卷，考验你计算能力。
+这门课的考核难度相对较低，**公式化试卷**，考验你计算能力。
 
 当时考的应该算是不太好了，排名也比较低。
 
@@ -60,8 +59,8 @@ materialLinks:
 
 讲课十分细致，也没有过多的考勤要求。
 
-用的是自己编的教材和讲义，可以说大家几乎都能深入浅出的理解线性代数了。
+用的是自己编的教材和讲义，可以说大家几乎都能**深入浅出**的理解线性代数了。
 
 ## 资源分享
 
-这里分享的是吴惠彬老师的课程PPT和电子书，往年题我手上只有一些比较老的，所以没有分享。想必老师会分享的。
+这里分享的是 **吴惠彬**老师的课程 PPT 和电子书，往年题我手上只有一些比较老的，所以没有分享。想必老师会分享的。
