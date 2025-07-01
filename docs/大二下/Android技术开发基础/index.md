@@ -3,12 +3,12 @@ course: Android技术开发基础
 credit: 2
 semester: 大二下
 author: Reina
-teacher: 
-courseRating: 
-teacherRating: 
+teacher: 金旭亮
+courseRating: 8
+teacherRating: 9
 
 difficulty: medium
-status: draft
+status: published
 
 date: 2025-06-27
 lastUpdated: 2025-06-27

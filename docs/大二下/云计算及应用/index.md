@@ -1,5 +1,5 @@
 ---
-course: 数据库设计与开发
+course: 云计算及应用
 credit: 2
 semester: 大二下
 author: Reina
