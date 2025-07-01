@@ -28,6 +28,12 @@ grades:
 materialLinks:
   - url: https://github.com/Ri-Nai-BIT-SE/Lexue-Code
     title: 乐学代码
+  - url: https://github.com/Ri-Nai-BIT-SE/BIT-SE/releases/download/离散数学/eBooks.zip
+    title: 课本 + 习题全解
+  - url: https://github.com/Ri-Nai-BIT-SE/BIT-SE/releases/download/离散数学/Papers.zip
+    title: 历年试卷
+materialTip:
+  历年试卷可能不太真，不过知识点是对的上的，酌情使用。我们这届的计算量比这些卷子的大了好几倍。
 noteLinks:
   - url: https://github.com/Ri-Nai-BIT-SE/Discrete-Math-Notes/
     title: 课程笔记

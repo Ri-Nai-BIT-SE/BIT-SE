@@ -25,7 +25,9 @@ grades:
   classPercentile: 23
   majorPercentile: 25
   overallPercentile: 29
-
+materialLinks:
+  - url: https://github.com/Ri-Nai-BIT-SE/BIT-SE/releases/download/马克思主义基本原理/Review-Material.pdf
+    title: 复习材料
 ---
 
 

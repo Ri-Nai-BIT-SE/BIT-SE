@@ -26,6 +26,10 @@ grades:
   majorPercentile: 4
   overallPercentile: 5
 showRankTip: true
+
+materialLinks:
+  - url: https://github.com/Ri-Nai-BIT-SE/BIT-SE/releases/download/大学物理/eBooks.zip
+    title: 课本 + 习题全解
 ---
 
 
