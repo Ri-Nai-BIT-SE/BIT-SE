@@ -1,5 +1,5 @@
 ---
-course: 面向对象程序设计
+course: 面向对象技术与方法
 credit: 2
 semester: 大二下
 author: Reina
@@ -24,4 +24,4 @@ tags:
 ---
 
 
-# 面向对象程序设计
+# 面向对象技术与方法
