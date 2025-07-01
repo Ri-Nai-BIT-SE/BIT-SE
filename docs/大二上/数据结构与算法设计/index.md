@@ -28,6 +28,8 @@ grades:
 materialLinks:
   - url: https://github.com/Ri-Nai-BIT-SE/Lexue-Code
     title: 乐学代码
+  - url: https://github.com/Ri-Nai-BIT-SE/BIT-SE/releases/download/数据结构与算法设计/eBooks.zip
+    title: 电子书（数据结构 + 算法设计 + 计算理论）
 noteLinks:
   - url: https://ri-nai-bit-se.github.io/Data-Structure-Notes/
     title: 课程笔记
