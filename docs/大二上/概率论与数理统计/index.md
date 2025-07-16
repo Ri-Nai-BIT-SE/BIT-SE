@@ -25,6 +25,9 @@ grades:
   classPercentile: 4
   majorPercentile: 5
   overallPercentile: 4
+materialLinks:
+  - url: https://github.com/Ri-Nai-BIT-SE/BIT-SE/releases/download/概率论与数理统计/eBook.pdf
+    title: 课本
 noteLinks:
   - url: https://ri-nai-bit-se.github.io/Probability-and-Statistics-Notes/
     title: 课程笔记
