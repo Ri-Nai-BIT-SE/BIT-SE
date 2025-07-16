@@ -3,7 +3,7 @@ course: 大学物理AII
 credit: 4
 semester: 大二上
 author: Reina
-teacher: 郑守军
+teacher: 郑守君
 courseRating: 3
 teacherRating: 6
 
