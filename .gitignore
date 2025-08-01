@@ -3,3 +3,5 @@ cache/
 dist/
 articles.js
 sidebar.js
+
+.DS_Store
