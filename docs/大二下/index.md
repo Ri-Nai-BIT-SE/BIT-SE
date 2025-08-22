@@ -1,11 +1,10 @@
 ---
 title: 大二下
-credit: 24.25（必修） + 2（选修）
+credit: 13.75（必修） + 8（选修）
 author: Reina
 grades:
-  avgScore: 78.52
-  myScore: 91.70
-  majorPercentile: 3
+  avgScore: 85.46
+  myScore: 94.28
 ---
 
 # 大二下

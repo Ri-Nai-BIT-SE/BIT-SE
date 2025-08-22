@@ -4,7 +4,7 @@ credit: 2
 semester: 大二下
 author: Reina
 teacher: 李博扬
-courseRating: 6
+courseRating: 8
 teacherRating: 9
 
 
@@ -18,7 +18,14 @@ tags:
   - 大二下
   - 计算机学院
   - 专业选修课
-  
+
+grades:
+  maxScore: 97
+  avgScore: 90.08
+  myScore: 97
+  classPercentile: 6
+  majorPercentile: 2
+  overallPercentile: 2
 
 
 ---
@@ -26,3 +33,14 @@ tags:
 
 # 云计算及应用
 
+阴差阳错选的一门课，这学期选的第四门课。
+
+也算是大作业课，只需要做两个大作业和一个最终作业就能拿高分了。
+
+1. 体验云服务器
+2. 体验Hardoop
+3. 体验Spark
+
+最终作业是使用 Spark + JDK语言写一道题，像词频统计，非常简单，问AI就好了。
+
+LLM 高手可以选。

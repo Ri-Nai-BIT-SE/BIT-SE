@@ -18,6 +18,12 @@ tags:
   - 马克思主义学院
   - 公共基础课程
   
-
+grades:
+  maxScore: 100
+  avgScore: 86.84
+  myScore: 89
+  classPercentile: 83
+  majorPercentile: 41
+  overallPercentile: 42
 
 ---
