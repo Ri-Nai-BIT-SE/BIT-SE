@@ -19,6 +19,12 @@ tags:
   - 计算机学院
   - 专业选修课
 
+materialLinks:
+  - url: https://github.com/Ri-Nai-BIT-SE/Cloud-Computing
+    title: 实验 + 作业 + 项目源码
+  - url: https://ri-nai-bit-se.github.io/Cloud-Computing/
+    title: 实验报告在线阅读
+
 grades:
   maxScore: 97
   avgScore: 90.08

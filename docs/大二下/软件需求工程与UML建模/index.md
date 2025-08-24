@@ -18,8 +18,9 @@ tags:
   - 大二下
   - 计算机学院
   - 专业必修课
-  
-
+noteLinks:
+  - url: https://ri-nai-bit-se.github.io/Software-Engineering-UML-Notes/
+    title: 笔记
 grades:
   maxScore: 98
   avgScore: 89.25

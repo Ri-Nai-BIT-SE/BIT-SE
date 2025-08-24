@@ -18,7 +18,14 @@ tags:
   - 大二下
   - 计算机学院
   - 专业必修课
-  
+materialLinks:
+  - url: https://github.com/Ri-Nai-BIT-SE/OOP-Java/
+    title: 实验 + 作业 + 笔记等
+  - url: https://ri-nai-bit-se.github.io/OOP-Java/%E5%BE%80%E5%B9%B4%E9%A2%98/
+    title: 往年题
+noteLinks:
+  - url: https://ri-nai-bit-se.github.io/OOP-Java/
+    title: 笔记
 grades:
   maxScore: 100
   avgScore: 75.85

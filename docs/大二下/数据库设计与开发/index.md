@@ -28,6 +28,12 @@ grades:
 materialLinks:
   - url: https://ri-nai-bit-se.github.io/Database-zxl-Notes/paper/2022.html
     title: 网传 2022 年试卷
+  - url: https://github.com/Ri-Nai-BIT-SE/Database-zxl
+    title: 实验 + 作业源码
+  - url: https://ri-nai-bit-se.github.io/Database-zxl/
+    title: 实验报告在线阅读
+  - url: https://github.com/Ri-Nai-BIT-SE/Database-zxl-ASS3
+    title: 大作业3源码
 noteLinks:
   - url: https://ri-nai-bit-se.github.io/Database-zxl-Notes/
     title: 课程笔记
