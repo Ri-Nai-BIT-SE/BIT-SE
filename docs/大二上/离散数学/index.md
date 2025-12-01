@@ -35,7 +35,7 @@ materialLinks:
 materialTip:
   历年试卷可能不太真，不过知识点是对的上的，酌情使用。我们这届的计算量比这些卷子的大了好几倍。
 noteLinks:
-  - url: https://github.com/Ri-Nai-BIT-SE/Discrete-Math-Notes/
+  - url: https://ri-nai-bit-se.github.io/Discrete-Math-Notes/
     title: 课程笔记
 
 ---
